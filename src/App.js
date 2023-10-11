@@ -15,8 +15,10 @@ const App=()=>{
   };
   return(
     <>
-      <User onAddData={addDataToTable}/>
-      <Delete tableData={tableData} onDeleteData={deleteData}/>
+      <div className="container">
+          <User onAddData={addDataToTable}/>
+          <Delete tableData={tableData} onDeleteData={deleteData}/>
+      </div>
     </>
   )
 }

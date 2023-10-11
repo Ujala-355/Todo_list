@@ -24,13 +24,17 @@ const User=({onAddData})=>{
                 <h3>First name</h3>
                 <TextField 
                 id="filled-basic" 
-                label="enter you name" variant="filled" 
+                label="enter you name" 
+                variant="filled" 
+                className="textfield"
                 onChange={handleFirstName}/>
 
                 <h3>Last name</h3>
                 <TextField 
                 id="filled-basic" 
-                label="enter your last name" variant="filled" 
+                label="enter your last name" 
+                variant="filled" 
+                className="textfield"
                 onChange={handleLastName}/>
 
                 <Button 
