@@ -1,8 +1,27 @@
+import React from "react";
 import Button from '@mui/material/Button';
-const Delete=()=>{
+const Delete=({tableData,onDeleteData})=>{
     return(
         <>
-           <Button variant="contained">Delete</Button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+            
+            <tbody>
+                {tableData.map((data,index)=>(
+                    <tr key={index}>
+                        <td>{data}</td>
+                        <td>
+                            <Button variant="contained" onClick={()=>onDeleteData(index)}>Delete</Button>
+                        </td>
+                    </tr>
+                ))}
+            </tbody>
+            </table>
         </>
     ) 
 }
